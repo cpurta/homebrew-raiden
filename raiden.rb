@@ -6,7 +6,6 @@ class Raiden < Formula
   depends_on :macos => :el_capitan
 
   depends_on "python@2" => :build
-  depends_on :pip => :build
 
   def install
     system "cd", "raiden"
