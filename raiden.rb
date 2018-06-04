@@ -3,7 +3,7 @@ class Raiden < Formula
   homepage "https://github.com/raiden-network/homebrew-raiden"
   url "https://github.com/raiden-network/raiden.git", :tag => 'v0.3.0'
 
-  depends_on :mac_os => :el_capitan
+  depends_on :macos => :el_capitan
 
   depends_on :python => :build
   depends_on :pip => :build
