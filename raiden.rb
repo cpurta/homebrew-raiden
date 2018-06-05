@@ -1,16 +1,13 @@
 class Raiden < Formula
   desc "Raiden Network"
-  homepage "https://github.com/raiden-network/homebrew-raiden"
-  url "https://github.com/raiden-network/raiden.git", :tag => 'v0.3.0'
+  homepage "https://github.com/cpurta/homebrew-raiden"
+  url "https://github.com/raiden-network/raiden/releases/download/v0.3.0/raiden-v0.3.0-macOS.zip"
+  version "v0.3.0"
 
   depends_on :macos => :el_capitan
 
-  depends_on "python@2" => :build
-
   def install
-    system "cd", "raiden"
-    system "pip", "install", "--upgrade", "-r", "requirements-dev.txt"
-    system "python", "setup.py", "develop"
+    system "unzip", "raiden-v0.3.0-macOS.zip"
   end
 
   test do
