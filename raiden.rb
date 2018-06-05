@@ -7,11 +7,10 @@ class Raiden < Formula
   depends_on :macos => :el_capitan
 
   def install
-    system "mv", "raiden-v0.3.0-linux", "raiden"
-    prefix.install "raiden"
+    bin.install "raiden-v0.3.0-linux"
   end
 
   test do
-    system "#{prefix}/raiden", "version"
+    system "#{bin}/raiden", "version"
   end
 end
