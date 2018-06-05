@@ -7,7 +7,8 @@ class Raiden < Formula
   depends_on "python@2" => :build
 
   def install
-    system "make", "install"
+    system "pip", "install", "-r", "requirements-dev.txt"
+    system "python", "setup.py", "develop"
     bin.install "raiden"
   end
 
