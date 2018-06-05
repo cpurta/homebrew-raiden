@@ -8,8 +8,8 @@ class Raiden < Formula
   depends_on :macos => :el_capitan
 
   def install
-    system "unzip", "#{HOMEBREW_PREFIX}/raiden-v0.3.0-macOS.zip"
-    system "mv", "#{HOMEBREW_PREFIX}/raiden-v0.3.0-macOS", "#{HOMEBREW_PREFIX}/raiden"
+    system "unzip", "raiden-v0.3.0-macOS.zip"
+    system "mv", "raiden-v0.3.0-macOS", "raiden"
     bin.install "raiden"
   end
 
