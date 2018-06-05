@@ -45,7 +45,7 @@ brew update && brew upgrade
 ## Versions
 List available versions with:
 ```
-ls -l /usr/local/Cellar/raiden-network
+ls -l /usr/local/Cellar/raiden
 ```
 
 If you have other versions installed, you can switch with:
