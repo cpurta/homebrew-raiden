@@ -1,23 +1,18 @@
 class Raiden < Formula
   desc "Raiden Network"
   homepage "https://github.com/cpurta/homebrew-raiden"
-  url "https://github.com/raiden-network/raiden.git", :tag => "v0.3.0"
+  url "https://github.com/raiden-network/raiden/releases/download/v0.3.0/raiden-v0.3.0-macOS.zip"
+  version "v0.3.0"
+  sha256 "3f34d241f6b23d30d69c7bd25fa62de280e5f2bb34f9c08340f3e390e80e2809"
 
   depends_on :macos => :el_capitan
-  depends_on "python@2" => :build
 
   def install
-    system "easy_install", "pip"
-    system "pip", "install", "virtualenv"
-    system "virtualenv", "venv-raiden"
-    system "source", "venv-raiden/bin/activate"
-    system "cd", "raiden"
-    system "pip", "install", "-r", "requirements-dev.txt"
-    system "python", "setup.py", "develop"
-    bin.install "raiden"
+    system "pwd"
+    prefix.install "raiden-v0.3.0-macOS"
   end
 
   test do
-    system "#{HOMEBREW_PREFIX}/bin/raiden", "version"
+    system "#{prefix}/raiden", "version"
   end
 end
