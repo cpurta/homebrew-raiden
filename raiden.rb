@@ -8,7 +8,7 @@ class Raiden < Formula
   depends_on :macos => :el_capitan
 
   def install
-    system "unzip", "raiden-v0.3.0-macOS.zip"
+    system "ls"
     system "mv", "raiden-v0.3.0-macOS", "raiden"
     bin.install "raiden"
   end
