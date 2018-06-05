@@ -7,7 +7,7 @@ class Raiden < Formula
   depends_on :macos => :el_capitan
 
   def install
-    bin.install "raiden-v0.3.0-linux"
+    bin.install "raiden-v0.3.0"
   end
 
   test do
