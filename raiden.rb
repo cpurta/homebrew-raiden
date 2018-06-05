@@ -7,6 +7,11 @@ class Raiden < Formula
   depends_on "python@2" => :build
 
   def install
+    # system "easy_install", "pip"
+    # system "pip", "install", "virtualenv"
+    # system "virtualenv", "venv-raiden"
+    # system "source", "venv-raiden/bin/activate"
+    system "cd", "raiden"
     system "pip", "install", "-r", "requirements-dev.txt"
     system "python", "setup.py", "develop"
     bin.install "raiden"
